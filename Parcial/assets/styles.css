@@ -1,0 +1,26 @@
+header{
+    background-color: darkcyan;
+}
+
+.pitures{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    row-gap: 10px;
+    gap: 10px;
+    column-gap: 10px;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+}
