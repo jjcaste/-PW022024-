@@ -1,66 +1,114 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Conectar con los assets de css y js -->
     <script src="assets/main.js" defer></script>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Inicio</title>
 </head>
 <body>
     <header class="encabezado">
-        <p>hola</p>
-        <img src="" alt="">
+        <p>¡Bienvenido a la tienda de monitores Pingu el Pingüino!</p>
+        <img src="linux.jpeg" alt="pingu">
     </header>
     <nav>
+        <!--Creación de la parte de navegación de la pagina-->
         <table class="tabla">
             <tr>
                 <td>
-                    <a href=""><i>Beneficios del producto</i></a>
+                    <a href="#ninguno"><i>Beneficios del producto</i></a>
                 </td>
                 <td>
-                    <a href="">Características clave</a>
+                    <a href="#caracteristicas_inventadas">Características clave</a>
                 </td>
                 <td>
-                    <a href="">Testimonios de clientes</a>
+                    <a href="#reviews_pagadas">Testimonios de clientes</a>
                 </td>
                 <td>
-                    <a href="">Compra de nuestros productos</a>
+                    <a href="#vamos_vende_tu_alma">Compra de nuestros productos</a>
                 </td>
             </tr>
         </table>
     </nav>
     <main class="main-section">
-        <h1>Beneficios</h1>
-        <p class="beneficios">Nuestros </p>
+        <h1 id="ninguno">Beneficios</h1>
+        <p class="beneficios">Nuestros monitores tienen una duración bastante duradera. <br>
+        La garantía le cubre hasta que la saca de la tienda, por un costo adicional le mandamos a un Técnico <br>
+        
+        </p>
         <div class="pictures">
             <div>
                 <img class="imagenes" src="Monitor.jpeg" alt="Imagen4"/>
+                <p><i>Tan solo mira que facheritos se ven</i></p>
             </div>
             <div>
                 <img class="imagenes" src="Monitor1.webp" alt="Imagen1"/>
+                <p><i>Colores varios</i></p>
             </div>
             <div>
                 <img class="imagenes" src="Monitoe2.webp" alt="Imagen2"/>
+                <p><i>Fácil de instalar</i></p>
             </div>
             <div>
                 <img class="imagenes" src="Monitor3.webp" alt="Imagen3"/>
+                <p><i>Compra no seas malo</i></p>
             </div>
         </div>
-        <h1>Características del producto</h1>
-
-        <h1>Testimonios de clientes</h1>
-
-        <h1>Formulario de Contacto</h1>
+        <br>
+        <h1 id="caracteristicas_inventadas">Características del producto</h1>
+        <div id="abc">
+            <ol>
+                <li> Pantalla Ultra HD 4K (3840x2160 píxeles)</li>
+                <li> Tecnología de Panel IPS (In-Plane Switching)</li>
+                <li> Frecuencia de Actualización de 144 Hz</li>
+                <li> Diseño Ergonómico y Estilizado</li>
+                <li> Conectividad Avanzada</li>
+                <li> Protección Ocular Avanzada</li>
+                <li> Modos Personalizables</li>
+                <li> Audio y Multitasking Integrado</li>
+                <li> Eficiencia Energética</li>
+                <li> Compatibilidad con Montajes VESA</li>
+            </ol>
+        </div>
+        
+        <h1 id="reviews_pagadas">Testimonios de clientes</h1>
+        <div class="pictures">
+            <div>
+                <img class="imagenes" src="garen.jpg" alt="Lo siento">
+                <p id="comments"><i>Yo compré estos monitores, todo está bien. <br>
+                Ahora solo hace falta que tenga luz para poder usarlos</i> 
+                <i style="font-size:24px" class="fa">&#xf075;</i></p>
+            </div>
+            <div>
+                <img class="imagenes" src="fortune.png" alt="pero son los unicos">
+                <p id="comments"><i> Quisiera saber si hay descuento a los influencer...<br>
+                Pienso hacerles publicidad en mi directo de tiktok, <br>
+                 soy famosa, tengo 150 seguidores.</i>
+                    <i style="font-size:24px" class="fa">&#xf075;</i></p>
+            </div>
+            <div>
+                <img class="imagenes" src="teemo.webp" alt="campeones que use">
+                <p id="comments"><i>La peor kompra ke e echo, pedi doz i solo <br>
+                    me dieron unas kajas vien pezadas </i> 
+                    <i style="font-size:24px" class="fa">&#xf075;</i></p>
+                    
+            </div>
+            <!-- Duré poco en lol y menos mal pero sí me hice medio tóxico con los campeones -->
+        </div>
+        <br>
+        <h1 id="vamos_vende_tu_alma">Formulario de Contacto</h1>
+        <!--Esto es la creación del formulario de compra-->
+        <!--Sip me ayudo Charlie(chatgpt)-->
         <form id="contactForm">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
-
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
             <br>
-            <label for="message">Dirección:</label>
+            <label for="address">Dirección:</label>
             <textarea id="address" name="message" rows="4" required></textarea>
             <br>
             <label>
@@ -71,12 +119,12 @@
                 <input type="radio" name="pago" value="tarjeta"> Tarjeta
             </label>
             <br>
-
             <button type="submit">Enviar</button>
         </form>
     </main>
     <footer class="pata_pagina">
         <p>
+            <!--URL necesarios porque me los pidieron-->
             <a href="Terminos.html">Términos y Condiciones</a> <br>
             <a href="Privacidad.html">Política de privacidad</a> <br>
             <a href="https://www.facebook.com/RiotGames/">Facebook</a><br>
