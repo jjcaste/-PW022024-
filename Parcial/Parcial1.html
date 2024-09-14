@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,28 +13,76 @@
         <p>hola</p>
         <img src="" alt="">
     </header>
-    <nav></nav>
-    
-    <div class="pictures"></div>
-    <div>
-        <img src="" alt="">
-    </div>
-    <div>
-        <img src="" alt="">
-    </div>
-    <div>
-        <img src="" alt="">
-    </div>
-    <div>
-        <img src="" alt="">
-    </div>
+    <nav>
+        <table class="tabla">
+            <tr>
+                <td>
+                    <a href=""><i>Beneficios del producto</i></a>
+                </td>
+                <td>
+                    <a href="">Características clave</a>
+                </td>
+                <td>
+                    <a href="">Testimonios de clientes</a>
+                </td>
+                <td>
+                    <a href="">Compra de nuestros productos</a>
+                </td>
+            </tr>
+        </table>
+    </nav>
+    <main class="main-section">
+        <h1>Beneficios</h1>
+        <p class="beneficios">Nuestros </p>
+        <div class="pictures">
+            <div>
+                <img class="imagenes" src="Monitor.jpeg" alt="Imagen4"/>
+            </div>
+            <div>
+                <img class="imagenes" src="Monitor1.webp" alt="Imagen1"/>
+            </div>
+            <div>
+                <img class="imagenes" src="Monitoe2.webp" alt="Imagen2"/>
+            </div>
+            <div>
+                <img class="imagenes" src="Monitor3.webp" alt="Imagen3"/>
+            </div>
+        </div>
+        <h1>Características del producto</h1>
 
+        <h1>Testimonios de clientes</h1>
+
+        <h1>Formulario de Contacto</h1>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Dirección:</label>
+            <textarea id="address" name="message" rows="4" required></textarea>
+            <br>
+            <label>
+                <input type="radio" name="pago" value="efectivo"> Efectivo
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pago" value="tarjeta"> Tarjeta
+            </label>
+            <br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
     <footer class="pata_pagina">
-        <a href="Terminos.html">Terminos y Condiciones</a>
-        <a href="Privacidad.html">Política de privacidad</a>
-        <a href="https://www.facebook.com/RiotGames/">Facebook</a>
-        <a href="https://www.instagram.com/riotgames/">Instagram</a>
-        <a href="https://github.com/JuanJoseCastellanosMajano/-PW022024-.git">El esclavito que pusimos a hacer este parcial</a>
+        <p>
+            <a href="Terminos.html">Términos y Condiciones</a> <br>
+            <a href="Privacidad.html">Política de privacidad</a> <br>
+            <a href="https://www.facebook.com/RiotGames/">Facebook</a><br>
+            <a href="https://www.instagram.com/riotgames/">Instagram</a><br>
+            <a href="https://github.com/JuanJoseCastellanosMajano/-PW022024-.git">El esclavito que pusimos a hacer este parcial</a>
+        </p>    
     </footer>
 </body>
 </html>
