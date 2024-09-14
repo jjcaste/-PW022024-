@@ -1,5 +1,5 @@
-
 * {
+   /*Clase para toda la pagina web que me ayudó con los bordes*/ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,105 +12,41 @@ body {
     color: #333333;
 }
 
-/* Encabezado */
+/* Estilos del encabezado */
 header {
-    width: 100%;
-    background-color: #333333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    z-index: 0;
-    position: relative; 
-}
-h1, h2 {
-    margin-bottom: 20px;
-}
-
-/* Indicaciones de la main-section*/
-.main-section {
-    position: relative;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 50px 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Indicaciones de las Imágenes */
-.pictures {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.imagenes {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Botones */
-button {
-    background-color: #008cba;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #005f7a;
-}
-
-/* Tabla */
-.table {
-    background-color: #f5f5f5;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* Instrucciones del Pie de página */
-.pata_pagina {
     background-color: #333333;
     color: white;
-    padding: 40px;
-    text-align: center;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    z-index: 1000;
+}
+/*Modificador unicamente para la imagen del encabezado*/
+header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px; 
 }
 
-
-@media screen and (max-width: 768px) {
-    .pictures {
-        flex-direction: column;
-    }
-
-    .imagenes {
-        width: 100%;
-        max-width: 300px;
-    }
+/* Asegura que el texto del header se alinee al centro verticalmente */
+header p {
+    margin-left: 20px;
+    font-size: 1.5em;
 }
 
-@media screen and (max-width: 600px) {
-    .pata_pagina {
-        font-size: 14px;
-    }
-}
-
+/* Estilos para la barra de navegación */
 nav {
-    position: fixed; /* Fijar la barra de navegación */
-    top: 0;
+    /*position: fixed;*/
+    top: 100px; /* Coloca el nav debajo del encabezado */
     left: 0;
-    width: 100%; /* Que ocupe todo el ancho de la pantalla */
-    background-color: #333333;
+    width: 100%;
+    background-color: #808080;
     padding: 10px 0;
-    z-index: 1000; /* Asegura que la barra esté sobre otros elementos */
+    z-index: 0; /* Asegura que la barra de navegación esté debajo del encabezado */
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -126,6 +62,131 @@ nav a:hover {
     background-color: #444444;
 }
 
+/* Estilos para la sección principal */
 .main-section {
-    padding-top: 70px; 
+    padding-top: 140px; /* Ajusta este valor para dar espacio suficiente debajo del nav y encabezado */
+    background-color: #ffffff;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+/* Estilos para los botones */
+button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f7a;
+}
+
+/* Estilos para la tabla */
+.table {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+.pata_pagina {
+    background-color: #808080;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Ajustes responsivos */
+@media screen and (max-width: 768px) {
+    .pictures {
+        flex-direction: column;
+    }
+
+    .imagenes {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pata_pagina {
+        font-size: 14px;
+    }
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .encabezado img {
+        margin-bottom: 10px;
+    }
+}
+
+div{
+    text-align: center;
+    align-items: baseline;
+}
+
+.imagenes {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Importante para suavizar los cambios */
+}
+
+/* Efecto hover */
+.imagenes:hover {
+    transform: scale(1.1); /* Ajusta este valor según el efecto que desees */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.1) rotate(3deg); /* Crece y gira un poco */
+    opacity: 0.9; /* Levemente más transparente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra más marcada */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactForm{
+background-color: #fbeee6;
+border-radius: 10px;
+font-family: 'Times New Roman', Times, serif
+}
+
+.abc {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.caracteristicas_inventadas {
+    text-align: center;
+}
+
+.abc ol {
+    list-style-position: inside; /* Los números estarán dentro del área de contenido de los <li> */
+    padding-left: 0; /* Elimina el padding predeterminado de la lista ordenada */
+}
+
+.abc ol li {
+    display: inline-block; /* Hace que cada elemento de la lista se comporte como un bloque en línea */
+    text-align: left; /* Asegura que el texto se alinee correctamente con los números */
+    width: 100%; /* Ocupa todo el ancho disponible para centrar el texto y los números */
 }
