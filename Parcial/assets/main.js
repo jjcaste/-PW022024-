@@ -27,3 +27,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+//ChatGPT. (2024, septiembre 12). Creación de formulario. OpenAI. Conversación con JuanJoseCastellanosMajano.

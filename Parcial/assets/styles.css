@@ -1,11 +1,14 @@
+/* Aplicación de estilos a toda la página */
 * {
-   /*Clase para toda la pagina web que me ayudó con los bordes*/ 
+    /* Aplica margen y relleno de 0 a todos los elementos y 
+       asegura que el ancho y alto de los elementos incluyan bordes y relleno */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    /* Establece una fuente predeterminada, interlineado, color de fondo y color del texto */
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
@@ -14,6 +17,8 @@ body {
 
 /* Estilos del encabezado */
 header {
+    /* Distribuye los elementos del header, asegurando que estén alineados horizontalmente 
+       y centrados verticalmente con espacio entre ellos */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,17 +27,18 @@ header {
     color: white;
     font-family: 'Lato', sans-serif;
     position: relative;
-    z-index: 1000;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
-/*Modificador unicamente para la imagen del encabezado*/
+
+/* Estilo específico para la imagen dentro del encabezado */
 header img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
-    margin-right: 20px; 
+    object-fit: cover; /* Asegura que la imagen se ajuste bien a sus dimensiones */
+    margin-right: 20px; /* Añade espacio a la derecha de la imagen */
 }
 
-/* Asegura que el texto del header se alinee al centro verticalmente */
+/* Centra el texto dentro del encabezado y le da un tamaño mayor */
 header p {
     margin-left: 20px;
     font-size: 1.5em;
@@ -40,49 +46,53 @@ header p {
 
 /* Estilos para la barra de navegación */
 nav {
-    /*position: fixed;*/
-    top: 100px; /* Coloca el nav debajo del encabezado */
+    /* La barra de navegación no es fija en la parte superior, 
+       pero está ubicada justo debajo del encabezado */
+    top: 100px;
     left: 0;
     width: 100%;
     background-color: #808080;
     padding: 10px 0;
     z-index: 0; /* Asegura que la barra de navegación esté debajo del encabezado */
     font-style: italic;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 nav a {
+    /* Estilos para los enlaces dentro de la navegación, incluyendo el color y espaciado */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
 }
 
+/* Efecto al pasar el cursor sobre los enlaces de la navegación */
 nav a:hover {
     background-color: #444444;
 }
 
 /* Estilos para la sección principal */
 .main-section {
-    padding-top: 140px; /* Ajusta este valor para dar espacio suficiente debajo del nav y encabezado */
+    /* Añade espacio en la parte superior de la sección para evitar que 
+       el contenido quede detrás del header y la barra de navegación */
+    padding-top: 140px;
     background-color: #ffffff;
     padding: 50px 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del contenedor */
     text-align: center;
 }
 
-/* Estilos para las imágenes */
+/* Estilos para las imágenes dentro de la sección */
 .pictures {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten automáticamente en varias filas si es necesario */
+    gap: 20px; /* Añade espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes en el contenedor */
 }
 
-
-/* Estilos para los botones */
+/* Estilos generales para los botones */
 button {
     background-color: #008cba;
     color: white;
@@ -90,12 +100,13 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color al hacer hover */
 }
 
+/* Estilo al pasar el cursor sobre los botones */
 button:hover {
-    background-color: #005f7a;
+    background-color: #005f7a; /* Cambio de color del botón al hacer hover */
 }
 
 /* Estilos para la tabla */
@@ -114,21 +125,22 @@ button:hover {
     text-align: center;
 }
 
-/* Ajustes responsivos */
+/* Ajustes responsivos para pantallas con un ancho máximo de 768px */
 @media screen and (max-width: 768px) {
     .pictures {
-        flex-direction: column;
+        flex-direction: column; /* Las imágenes se apilan verticalmente en pantallas pequeñas */
     }
 
     .imagenes {
         width: 100%;
-        max-width: 300px;
+        max-width: 300px; /* Establece un ancho máximo para las imágenes */
     }
 }
 
+/* Ajustes responsivos para pantallas con un ancho máximo de 600px */
 @media screen and (max-width: 600px) {
     .pata_pagina {
-        font-size: 14px;
+        font-size: 14px; /* Disminuye el tamaño del texto en el pie de página */
     }
     .encabezado {
         flex-direction: column;
@@ -136,40 +148,41 @@ button:hover {
     }
 
     .encabezado img {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Añade un margen inferior a la imagen del encabezado */
     }
 }
 
-div{
+/* Centrado general para los div */
+div {
     text-align: center;
     align-items: baseline;
 }
 
+/* Estilos específicos para las imágenes */
 .imagenes {
     width: 200px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Importante para suavizar los cambios */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de las imágenes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos */
 }
 
-/* Efecto hover */
+/* Efecto hover en las imágenes */
 .imagenes:hover {
-    transform: scale(1.1); /* Ajusta este valor según el efecto que desees */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1.1) rotate(3deg); /* Crece y gira un poco */
-    opacity: 0.9; /* Levemente más transparente */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra más marcada */
+    transform: scale(1.1) rotate(3deg); /* La imagen crece y gira levemente */
+    opacity: 0.9; /* Aumenta la transparencia ligeramente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra más fuerte al hacer hover */
     transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 }
 
-#contactForm{
-background-color: #fbeee6;
-border-radius: 10px;
-font-family: 'Times New Roman', Times, serif
+/* Estilos para el formulario de contacto */
+#contactForm {
+    background-color: #fbeee6;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/* Estilos para el contenedor y la lista ordenada */
 .abc {
     max-width: 50%;
     margin: 0 auto;
@@ -181,12 +194,14 @@ font-family: 'Times New Roman', Times, serif
 }
 
 .abc ol {
-    list-style-position: inside; /* Los números estarán dentro del área de contenido de los <li> */
-    padding-left: 0; /* Elimina el padding predeterminado de la lista ordenada */
+    list-style-position: inside; /* Los números de la lista estarán dentro del área de contenido de los <li> */
+    padding-left: 0; /* Elimina el padding predeterminado de la lista */
 }
 
 .abc ol li {
     display: inline-block; /* Hace que cada elemento de la lista se comporte como un bloque en línea */
-    text-align: left; /* Asegura que el texto se alinee correctamente con los números */
-    width: 100%; /* Ocupa todo el ancho disponible para centrar el texto y los números */
+    text-align: left; /* Alinea el texto a la izquierda dentro del bloque */
+    width: 100%; /* Asegura que cada elemento ocupe todo el ancho disponible */
 }
+
+/*ChatGPT. (2024, septiembre 13). Comentarios sobre código HTML y CSS. OpenAI. Conversación con JuanJoseCastellanosMajano.*/
